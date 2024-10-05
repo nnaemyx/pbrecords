@@ -15,9 +15,12 @@ const config: Config = {
   		xl: '1280px'
   	},
   	extend: {
+		colors: {
+			primary: "#00FF00",
+			secondary: "#FEFEFE",
+			dark: "#1A1A1A"
+		},
   		fontFamily: {
-  			aeonik: ['var(--font-aeonik-mono)'],
-  			helvtica: ['var(--font-helva-sans)'],
   			spaceGrotesk: ['var(--font-space-grotesk)']
   		},
   		borderRadius: {

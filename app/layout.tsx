@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./_components/Navbar";
+import MobileNav from "./_components/Mobilenav";
 
-const geistSans = localFont({
+const spaceGrotesk = localFont({
   src: "./fonts/SpaceGrotesk-Light.ttf",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  variable: "--font-space-grotesk",
+  weight: "300 500",
 });
 
 export const metadata: Metadata = {
@@ -21,8 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} antialiased bg-[#0E0E0E]`}
+        className={`${spaceGrotesk.variable} antialiased bg-[#0E0E0E]`}
       >
+        <Navbar/>
+        <MobileNav/>
         {children}
       </body>
     </html>
