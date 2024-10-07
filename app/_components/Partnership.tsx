@@ -1,5 +1,5 @@
 import React from "react";
-import Collection1 from "/public/assets/studio1.jpg";
+import Collection1 from "/public/assets/Untitled (500 x 400 px) (1).svg";
 import Image from "next/image";
 
 const Partnership = () => {

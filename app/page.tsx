@@ -20,11 +20,14 @@ import {
 // import { Button } from "@/components/ui/button";
 
 const images = [
-  { src: "/assets/studio1.jpg", alt: "Music 1" },
-  { src: "/assets/studio2.jpg", alt: "Music 2" },
-  { src: "/assets/studio3.jpg", alt: "Music 3" },
-  { src: "/assets/studio4.jpg", alt: "Music 4" },
-  { src: "/assets/studio1.jpg", alt: "Music 5" },
+  { src: "/assets/Untitled (500 x 400 px) (1).svg", alt: "Music 1" },
+  { src: "/assets/Untitled (500 x 400 px) (2).svg", alt: "Music 2" },
+  { src: "/assets/Untitled (500 x 400 px) (3).svg", alt: "Music 3" },
+  { src: "/assets/Untitled (500 x 400 px) (4).svg", alt: "Music 4" },
+  { src: "/assets/Untitled (500 x 400 px) (5).svg", alt: "Music 4" },
+  { src: "/assets/Untitled (500 x 400 px) (6).svg", alt: "Music 4" },
+  { src: "/assets/Untitled (500 x 400 px) (7).svg", alt: "Music 4" },
+  { src: "/assets/Untitled (500 x 400 px).svg", alt: "Music 5" },
 ];
 
 interface Slide {
@@ -240,7 +243,7 @@ export default function Home() {
       </div>
 
       {/* Image Marquee Section */}
-      <div className="relative overflow-hidden h-[400px] pt-[60px]">
+      <div className="relative overflow-hidden  pt-[60px]">
         {/* Using react-fast-marquee */}
         <Marquee pauseOnHover={true} speed={80} gradient={false}>
           {/* Map through the images array */}
@@ -251,7 +254,7 @@ export default function Home() {
                 alt={image.alt}
                 width={500}
                 height={400}
-                className="object-cover"
+                className=""
               />
             </div>
           ))}
