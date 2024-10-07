@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./_components/Navbar";
 import MobileNav from "./_components/Mobilenav";
+import Footer from "./_components/Footer";
 
 const spaceGrotesk = localFont({
   src: "./fonts/SpaceGrotesk-Light.ttf",
@@ -20,14 +21,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (typeof window !== 'undefined') {
+    const tidioScript = document.createElement('script');
+    tidioScript.src = '//code.tidio.co/6q1youuxdz26hb3iq8z5qmnix3qhlswh.js'; // Replace with your actual Tidio script code
+    tidioScript.async = true;
+    document.body.appendChild(tidioScript);
+  }
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} antialiased bg-[#0E0E0E]`}
+        className={`${spaceGrotesk.variable} antialiased bg-[#0E0E0E] text-secondary`}
       >
         <Navbar/>
         <MobileNav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

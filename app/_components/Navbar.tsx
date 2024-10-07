@@ -11,16 +11,24 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-[24px]">
           <ul className="font-spaceGrotesk text-[14px] text-white flex gap-[24px]">
-            <Link href="/Explore">
+            <Link href="#news">
               <li>News/Trends</li>
             </Link>
-            <li>Studio Section</li>
-            <li>Party Events</li>
-            <li>Ushering Service</li>
-            <li>Music & Brand Promotion</li>
-            <li>Partnership</li>
-            <li>Support</li>
-            <li>About us</li>
+            <Link href="#party">
+              <li>Party Events</li>
+            </Link>
+            <Link href="#ushering">
+              <li>Ushering Service</li>
+            </Link>
+            <Link href="#music">
+              <li>Music & Brand Promotion</li>
+            </Link>
+            <Link href="#partnership">
+              <li>Partnership</li>
+            </Link>
+            <Link href="#about">
+              <li>About us</li>
+            </Link>
           </ul>
           <div className="bg-[#141414] border border-solid border-[#212121] rounded-[6px] p-[5px]">
             <Image

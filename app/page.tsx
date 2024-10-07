@@ -5,6 +5,19 @@ import Marquee from "react-fast-marquee"; // Importing the Marquee component
 import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
 import MobileFashion from "/public/assets/studio1.jpg";
 import Fashion from "/public/assets/studio2.jpg";
+import Party from "./_components/Party";
+import Ushering from "./_components/Ushering";
+import Music from "./_components/Music";
+import Partnership from "./_components/Partnership";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogTitle,
+  DialogDescription,
+  DialogHeader,
+} from "@/components/ui/dialog";
+// import { Button } from "@/components/ui/button";
 
 const images = [
   { src: "/assets/studio1.jpg", alt: "Music 1" },
@@ -25,6 +38,14 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const slidesRef = useRef<HTMLDivElement | null>(null);
   const brands = [1, 2];
+  const [step, setStep] = useState(1); // State to manage the booking steps
+
+  const handleBookUs = () => {
+    setStep(2); // Move to the payment step
+  };
+  const handleGoBack = () => {
+    setStep(1); // Go back to the booking step
+  };
 
   const slides: Slide[] = [
     {
@@ -114,19 +135,106 @@ export default function Home() {
           <div className="text-[15px] leading-[150%] px-[20px] lg:hidden block font-spaceGrotesk mt-[12px]">
             <p>
               Connecting independent music artists to a global audience with
-              transparency, sustainability, and a commitment to authentic
-              music practices
+              transparency, sustainability, and a commitment to authentic music
+              practices
             </p>
           </div>
 
-          {/* Book Us Button */}
+          {/* Book Us Button with Dialog Trigger */}
           <div className="lg:max-w-[230px] px-[20px] w-full mt-[32px] lg:mt-[20px] mx-auto">
-            <button
-              className="font-spaceGrotesk font-medium w-full h-10 bg-gradient-to-b from-primary to-primary/60 rounded-[10px] text-sm text-white shadow-lg focus:outline-none"
-              onClick={() => alert("Booking form or modal opens")}
-            >
-              Book us now
-            </button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <button className="font-spaceGrotesk font-medium w-full h-10 bg-gradient-to-b from-primary to-primary/60 rounded-[10px] text-sm text-white shadow-lg focus:outline-none">
+                  Book us now
+                </button>
+              </DialogTrigger>
+
+              {/* Dialog Content */}
+              <DialogContent className="bg-[#1a1a1a] text-white rounded-lg p-6">
+                <DialogHeader>
+                  <DialogTitle>Book Us</DialogTitle>
+                  <DialogDescription>
+                    Fill in the details below to proceed with your booking.
+                  </DialogDescription>
+                </DialogHeader>
+
+                {/* Conditional Rendering for Booking Step 1 or Step 2 */}
+                {step === 1 ? (
+                  <div className="space-y-4">
+                    {/* Location Selection */}
+                    <div>
+                      <label className="block text-sm mb-2">Location</label>
+                      <select className="w-full p-2 rounded bg-[#333] text-white">
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="UK">United Kingdom</option>
+                      </select>
+                    </div>
+
+                    {/* Genre Selection */}
+                    <div>
+                      <label className="block text-sm mb-2">Genre</label>
+                      <select className="w-full p-2 rounded bg-[#333] text-white">
+                        <option value="Afrobeats">Afrobeats</option>
+                        <option value="Hip-Hop">Hip-Hop</option>
+                        <option value="Reggae">Reggae</option>
+                        <option value="Pop">Pop</option>
+                      </select>
+                    </div>
+
+                    {/* Email Field */}
+                    <div>
+                      <label className="block text-sm mb-2">Gmail</label>
+                      <input
+                        type="email"
+                        placeholder="Enter your email"
+                        className="w-full p-2 rounded bg-[#333] text-white"
+                      />
+                    </div>
+
+                    {/* Book Us Button */}
+                    <button
+                      onClick={handleBookUs}
+                      className="w-full rounded-[8px] h-10 bg-gradient-to-b from-primary to-primary/60"
+                    >
+                      Book us
+                    </button>
+                  </div>
+                ) : (
+                  <div className="space-y-4">
+                    {/* Payment Section (still in development) */}
+                    <div className="text-center">
+                      <p className="text-lg">
+                        This feature is still in development!
+                      </p>
+                      <p>Select your currency for booking:</p>
+                    </div>
+
+                    {/* Currency Selection */}
+                    <div>
+                      <select className="w-full p-2 rounded bg-[#333] text-white">
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="NGN">NGN - Nigerian Naira</option>
+                        <option value="GBP">GBP - British Pound</option>
+                      </select>
+                    </div>
+                    <button
+                      onClick={handleGoBack}
+                      className="w-full rounded-[8px] h-10 bg-gradient-to-b from-primary to-primary/60"
+                    >
+                      Go Back
+                    </button>
+                    <button
+                      disabled
+                      className="w-full rounded-[8px] h-10 bg-gradient-to-b from-primary to-primary/60"
+                    >
+                      Pay now
+                    </button>
+                  </div>
+                )}
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>
@@ -150,7 +258,7 @@ export default function Home() {
         </Marquee>
       </div>
 
-      <div className="mt-[40px] lg:mt-[60px] pl-[16px] lg:pl-[40px]">
+      <div className="mt-[40px] lg:mt-[60px] pl-[16px] lg:pl-[40px]" id="news">
         <h2 className="font-spaceGrotesk text-secondary font-medium text-[16px] lg:text-[20px]">
           News/Trends
         </h2>
@@ -187,7 +295,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <Image src={Fashion} alt="Featured brand images" className="w-[502px] h-[464px] rounded-[12px]" />
+              <Image
+                src={Fashion}
+                alt="Featured brand images"
+                className="w-[502px] h-[464px] rounded-[12px]"
+              />
             </div>
           </div>
         ))}
@@ -203,14 +315,18 @@ export default function Home() {
               key={index}
               className="bg-[#1A1A1A] p-[20px] min-w-[100%] snap-center rounded-[12px] border border-solid border-[#2B2B2B]"
             >
-              <Image src={slide.image} alt="image" className="w-full rounded-[8px]" />
+              <Image
+                src={slide.image}
+                alt="image"
+                className="w-full rounded-[8px]"
+              />
               <div className="mt-[80.87px] space-y-[20px] text-secondary font-spaceGrotesk">
                 <h2 className="text-[20px] font-medium">{slide.title}</h2>
                 <p>{slide.description}</p>
               </div>
               <div className="mt-[29px]">
                 <button className="font-spaceGrotesk font-medium w-full h-[44px] bg-gradient-to-b from-primary to-primary/60 rounded-[12px] text-sm text-white shadow-lg hover:bg-none hover:text-luxela_lilac hover:border hover:border-luxela_lilac focus:outline-luxela_lilac">
-                  View more
+                  Read more
                 </button>
               </div>
             </div>
@@ -228,6 +344,22 @@ export default function Home() {
             ></div>
           ))}
         </div>
+      </div>
+
+      <div id="party">
+        <Party />
+      </div>
+
+      <div id="ushering">
+        <Ushering />
+      </div>
+
+      <div id="music">
+        <Music />
+      </div>
+
+      <div id="partnership">
+        <Partnership />
       </div>
     </>
   );
