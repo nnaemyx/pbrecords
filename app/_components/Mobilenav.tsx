@@ -45,40 +45,40 @@ const MobileNav = () => {
       {isOpen && (
         <div className="fixed top-[100px] inset-0 overflow-y-auto  scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-800 pb-[60px] bg-[#0E0E0E] border-none z-50 px-[20px]">
           <nav className="mt-[40px] px-[20px]">
-            <ul className="space-y-[33px] font-spaceGrotesk text-white text-[18px]">
+            <ul className="font-spaceGrotesk text-white text-[18px]">
               <Link href="#news">
-                <li className="flex justify-between items-center">
+                <li className="flex  justify-between items-center">
                   <span>News/Trends</span>
                   <LinkArrowIcon />
                 </li>
               </Link>
               <Link href="#party">
-                <li className="flex justify-between items-center">
+                <li className="flex mt-[33px] justify-between items-center">
                   <span>Party Events</span>
                   <LinkArrowIcon />
                 </li>
               </Link>
               <Link href="#ushering">
-                <li className="flex justify-between items-center">
+                <li className="flex mt-[33px] justify-between items-center">
                   <span>Ushering Service</span>
                   <LinkArrowIcon />
                 </li>
               </Link>
 
               <Link href="#music">
-                <li className="flex justify-between items-center">
+                <li className="flex mt-[33px] justify-between items-center">
                   <span>Music Promotion</span>
                   <LinkArrowIcon />
                 </li>
               </Link>
               <Link href="#partnership">
-                <li className="flex justify-between items-center">
+                <li className="flex mt-[33px] justify-between items-center">
                   <span>Partnership</span>
                   <LinkArrowIcon />
                 </li>
               </Link>
               <Link href="#about">
-                <li className="flex justify-between items-center">
+                <li className="flex mt-[33px] justify-between items-center">
                   <span>About us</span>
                   <LinkArrowIcon />
                 </li>

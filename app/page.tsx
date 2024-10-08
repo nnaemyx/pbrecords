@@ -17,6 +17,7 @@ import {
   DialogDescription,
   DialogHeader,
 } from "@/components/ui/dialog";
+import About from "./_components/About";
 // import { Button } from "@/components/ui/button";
 
 const images = [
@@ -53,30 +54,31 @@ export default function Home() {
   const slides: Slide[] = [
     {
       id: 1,
-      title: "Name of collection",
+      title:
+        "MNRK Music Group has promoted Chris Moncada to Chief Operating Officer (COO), effective immediately.",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "In this elevated role, Moncada will oversee all day-to-day operations for MNRK, developing and executing key business strategies, and will drive strategic growth initiatives with a heavy focus on A&R, artist development, and catalog growth.",
       image: MobileFashion,
     },
     {
       id: 2,
-      title: "Name of collection",
+      title: "‘Espresso’ hitmaker Julian Bunetta inks global publishing agreement with Sony Music Publishing",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "Bunetta’s body of work that has exceeded 30 billion streams, and he has worked with stars from Sabrina Carpenter and Teddy Swims to Thomas Rhett, One Direction, Niall Horan, Rudimental, and many others.",
       image: MobileFashion,
     },
     {
       id: 3,
-      title: "Name of collection",
+      title: "From Pink Floyd’s $400m deal to TikTok’s scrapped Merlin talks… it’s MBW’s Weekly Round-Up",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "Last week, TikTok made headlines for shutting down its subscription music streaming service This week, the ByteDance-owned app made headlines for shutting down its re-licensing negotiations with indie rep Merlin.",
       image: MobileFashion,
     },
     {
       id: 4,
-      title: "Name of collection",
+      title: "Coldplay launch exclusive TikTok ‘MOON MUSiC’ in-app experience",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        "TikTok says that the hub for the new album, released today (October 4), will “engage fans across the globe, offering a unique, fan-centric initiative where users can explore content from the band”.",
       image: MobileFashion,
     },
   ];
@@ -127,19 +129,15 @@ export default function Home() {
 
           {/* Hero Description for Desktop */}
           <div className="hidden lg:block mt-[16px] text-[16px] font-spaceGrotesk">
-            <p>
-              Connecting independent music artists to a global audience with
-              transparency, sustainability, and a
-            </p>
-            <p>commitment to authentic music practices</p>
+            <p>Your One-Stop-Shop for Studio Sessions, Event Ushering,</p>
+            <p> Music Promotion, and Party Updates</p>
           </div>
 
           {/* Hero Description for Mobile */}
           <div className="text-[15px] leading-[150%] px-[20px] lg:hidden block font-spaceGrotesk mt-[12px]">
             <p>
-              Connecting independent music artists to a global audience with
-              transparency, sustainability, and a commitment to authentic music
-              practices
+              Your One-Stop-Shop for Studio Sessions, Event Ushering, Music
+              Promotion, and Party Updates
             </p>
           </div>
 
@@ -172,6 +170,11 @@ export default function Home() {
                         <option value="Ghana">Ghana</option>
                         <option value="South Africa">South Africa</option>
                         <option value="UK">United Kingdom</option>
+                        <option value="UK">India</option>
+                        <option value="UK">Algeria</option>
+                        <option value="UK">Ethiopia</option>
+                        <option value="UK">Argentina</option>
+                        <option value="UK">United States</option>
                       </select>
                     </div>
 
@@ -261,6 +264,10 @@ export default function Home() {
         </Marquee>
       </div>
 
+      <div className="mt-[40px] lg:mt-[60px] px-[16px] lg:px-[40px]" id="about">
+        <About />
+      </div>
+
       <div className="mt-[40px] lg:mt-[60px] pl-[16px] lg:pl-[40px]" id="news">
         <h2 className="font-spaceGrotesk text-secondary font-medium text-[16px] lg:text-[20px]">
           News/Trends
@@ -277,14 +284,16 @@ export default function Home() {
               {/* Text Section */}
               <div className="max-w-[502px] mt-[104px] flex flex-col justify-center  w-full">
                 <div className="text-secondary">
-                  <h2 className="font-aeonik text-[28px]">
-                    Limited Fashion Pieces
+                  <h2 className="font-aeonik text-[20px]">
+                    MNRK Music Group has promoted Chris Moncada to Chief
+                    Operating Officer (COO), effective immediately.
                   </h2>
                   <p className="mt-[24px] text-[20px] font-spaceGrotesk">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.{" "}
+                    In this elevated role, Moncada will oversee all day-to-day
+                    operations for MNRK, developing and executing key business
+                    strategies, and will drive strategic growth initiatives with
+                    a heavy focus on A&R, artist development, and catalog
+                    growth.
                   </p>
                 </div>
 

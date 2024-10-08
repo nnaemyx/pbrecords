@@ -1,5 +1,5 @@
 import React from "react";
-import Collection1 from "/public/assets/Untitled (500 x 400 px) (1).svg";
+import Collection1 from "/public/assets/partnership.jpg";
 import Image from "next/image";
 
 const Partnership = () => {
@@ -10,12 +10,19 @@ const Partnership = () => {
         Partner with us
       </h2>
 
+      <p className="text-[#BFBFBF] text-[18px]  lg:px-0 font-spaceGrotesk mt-[20px]">
+        We collaborate with: - Recording labels - Event planners - Music
+        promoters - Social media influencers - Party organizers
+      </p>
+
       {/* Description */}
-      <p className="text-[#BFBFBF] text-[18px] px-[20px] lg:px-0 font-spaceGrotesk mt-[20px]">
-        Luxela is a decentralized marketplace that connects local brands and
-        independent designers to a global audience. Luxela offers fast, cheap,
-        and seamless transactions and ensures customers get original products
-        from brands and not counterfeits.
+      <p className="text-[#BFBFBF] text-[18px] lg:px-0 font-spaceGrotesk mt-[20px]">
+        To become the go-to platform for entertainment enthusiasts, providing
+        unparalleled services, promoting emerging talent, and creating a vibrant
+        community. Join the Movement: Sign up now to explore our services, stay
+        updated on upcoming events, and connect with like-minded individuals.
+        Contact Information: Email: infopbrecordent.ltd@gmail.com Phone:
+        +2349042020299
       </p>
 
       {/* Full-width Image */}

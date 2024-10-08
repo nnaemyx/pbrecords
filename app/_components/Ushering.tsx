@@ -10,10 +10,10 @@ import {
   DialogHeader,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-import Collection1 from "/public/assets/studio1.jpg";
-import Collection2 from "/public/assets/studio2.jpg";
-import Collection3 from "/public/assets/studio3.jpg";
-import Collection4 from "/public/assets/studio4.jpg";
+import Collection1 from "/public/assets/IMG-20241007-WA0036.jpg";
+import Collection2 from "/public/assets/IMG-20241007-WA0038.jpg";
+import Collection3 from "/public/assets/IMG-20241007-WA0039.jpg";
+import Collection4 from "/public/assets/IMG-20241007-WA0034.jpg";
 
 // Collection data (without title)
 const collections = [
@@ -61,10 +61,15 @@ const Ushering = () => {
                   <div>
                     <label className="block text-sm mb-2">Location</label>
                     <select className="w-full p-2 rounded bg-[#333] text-white">
-                      <option value="Nigeria">Nigeria</option>
+                    <option value="Nigeria">Nigeria</option>
                       <option value="Ghana">Ghana</option>
                       <option value="South Africa">South Africa</option>
                       <option value="UK">United Kingdom</option>
+                      <option value="UK">India</option>
+                      <option value="UK">Algeria</option>
+                      <option value="UK">Ethiopia</option>
+                      <option value="UK">Argentina</option>
+                      <option value="UK">United States</option>
                     </select>
                   </div>
 
