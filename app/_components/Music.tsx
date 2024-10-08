@@ -1,10 +1,9 @@
 import ArrowRightIcon from "@/components/icons/ArrowRightIcon";
 import Image from "next/image";
 import React, { useState } from "react";
-import Collection1 from "/public/assets/studio1.jpg";
-import Collection2 from "/public/assets/studio2.jpg";
-import Collection3 from "/public/assets/studio3.jpg";
-import Collection4 from "/public/assets/studio4.jpg";
+import Collection1 from "/public/assets/IMG-20241007-WA0043.jpg";
+import Collection2 from "/public/assets/IMG-20241007-WA0042.jpg";
+import Collection3 from "/public/assets/IMG-20241007-WA0041.jpg";
 import {
     Dialog,
     DialogTrigger,
@@ -55,10 +54,15 @@ const Music = () => {
                   <div>
                     <label className="block text-sm mb-2">Location</label>
                     <select className="w-full p-2 rounded bg-[#333] text-white">
-                      <option value="Nigeria">Nigeria</option>
+                    <option value="Nigeria">Nigeria</option>
                       <option value="Ghana">Ghana</option>
                       <option value="South Africa">South Africa</option>
                       <option value="UK">United Kingdom</option>
+                      <option value="UK">India</option>
+                      <option value="UK">Algeria</option>
+                      <option value="UK">Ethiopia</option>
+                      <option value="UK">Argentina</option>
+                      <option value="UK">United States</option>
                     </select>
                   </div>
 
@@ -67,12 +71,15 @@ const Music = () => {
                     <label className="block text-sm mb-2">Type of Event</label>
                     <select className="w-full p-2 rounded bg-[#333] text-white">
                       <option value="University parties">
-                        University parties
+                        Promotion
                       </option>
-                      <option value="House parties">House parties</option>
-                      <option value="Club parties">Club parties</option>
+                      <option value="House parties">Video promotion</option>
+                      <option value="Club parties">Music promotion</option>
                       <option value="International concerts">
-                        International concerts
+                        Social media handle
+                      </option>
+                      <option value="International concerts">
+                        Advertisement for business
                       </option>
                     </select>
                   </div>
